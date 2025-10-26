@@ -107,6 +107,16 @@ services:
     build:
       context: ./
       target: client-dev
+    working_dir: /usr/local/app
+    volumes:
+      - ./client:/usr/local/app
+      - /usr/local/app/node_modules 
+    ports:
+      - "5173:5173" 
+    environment:
+      - HOST=0.0.0.0
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=100  
     develop:
       watch:
         - path: ./client/src
