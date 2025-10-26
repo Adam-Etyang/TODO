@@ -34,8 +34,8 @@ export function AddItemForm({ onNewItem }) {
                     value={newItem}
                     onChange={(e) => setNewItem(e.target.value)}
                     type="text"
-                    placeholder="New Item"
-                    aria-label="New item"
+                    placeholder="Add a new task"
+                    aria-label="Add a new task"
                 />
                 <Button
                     type="submit"
